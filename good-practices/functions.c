@@ -5,9 +5,14 @@
 // utliza-se "const" na definição do parametro.
 //Outra forma de passar o vetor como parametro é "v[]".
 
-void LeituraDeVetor(const int *v){
+/**
+ * @brief Imprime um vetor.
+ * 
+ * @param v Vetor que se deseja imprimir.
+ * @param tam_vetor Tamanho do vetor: Necessário para imprimir todas as posições.
+ */
+void LeituraDeVetor(const int *v, int tam_vetor){
     
-    int tam_vetor = sizeof(*v); //Retorna o tamanho do vetor
     int i = 0;
 
     while(i != tam_vetor){
@@ -19,8 +24,12 @@ void LeituraDeVetor(const int *v){
     }
 }
 
-
-int *CriaVetor(int tam){
+/**
+ * @brief Função para Criar um Vetor.
+ * @param tam  Tamanho do vetor que se deseja criar.
+ * @return É retornado um ponteiro que aponta para a primeira posição do vetor.
+ */
+int* CriaVetor(int tam){
     
     // Função "calloc" aloca e ja inicializa o conteudo como nulo
     int *vet = (int*)calloc(tam,sizeof(int));
@@ -34,17 +43,32 @@ int *CriaVetor(int tam){
         
     }
 
-    puts("\n");
     return vet;
 }
 
 /**
- * Funcão main para Teste das funcoes criadas
+ * @brief Função desaloca vetor
+ * 
+ * @param v Endereço do vetor(&v).
+ * 
+ */
+void DesalocaVetor(int **v){
+    
+    free(*v); //Acessa o conteudo de &v
+    *v = NULL; 
+
+    puts("Vetor desalocado!\n");
+}
+
+/**
+ * @brief Funcão para Teste das funcoes criadas
  */
 int main(){
 
-    int *v = CriaVetor(4);
-    LeituraDeVetor(v);
+    int *v = CriaVetor(6);
+    LeituraDeVetor(v,6);
+
+    DesalocaVetor(&v);
 
     return 0;
 }
