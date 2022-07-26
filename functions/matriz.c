@@ -59,7 +59,7 @@ void ImprimeMatriz(int **M, int n_rows, int n_columns){
 /**
  * @brief Desaloca Matriz
  * 
- * @param M Matriz a ser desalocada
+ * @param M Endereço da Matriz a ser desalocada (&M)
  * @param n_rows Quantidade de linhas da matriz
  */
 void DesalocaMatriz(int **M, int n_rows){
@@ -84,7 +84,7 @@ void TesteFuncoesMatriz(){
 
     ImprimeMatriz(matriz,2,3);
 
-    DesalocaMatriz(matriz,2);
+    DesalocaMatriz(&matriz,2);
 
 }
 
@@ -148,7 +148,7 @@ void ImprimeMatriz3D(int ***M, int n_slices, int n_rows, int n_columns){
 /**
  * @brief Desaloca matriz de 3 dimensões.
  * 
- * @param M Matriz 3D a ser desalocada.
+ * @param M Endereco da Matriz 3D a ser desalocada (&M).
  * @param n_slices Quantidade de latias.
  * @param n_rows Quantidade de linhas.
  */
@@ -181,6 +181,6 @@ void Teste3D(){
 
     ImprimeMatriz3D(matriz,3,3,3);
 
-    Desaloca3D(matriz,3,3);
+    Desaloca3D(&matriz,3,3);
     
 }
