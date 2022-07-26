@@ -1,28 +1,4 @@
-#include<stdio.h>
-#include<stdlib.h>
-
-//Quando não houver necessidade de manipulação do vetor dentro da função ou procedimento,
-// utliza-se "const" na definição do parametro.
-//Outra forma de passar o vetor como parametro é "v[]".
-
-/**
- * @brief Imprime um vetor.
- * 
- * @param v Vetor que se deseja imprimir.
- * @param tam_vetor Tamanho do vetor: Necessário para imprimir todas as posições.
- */
-void LeituraDeVetor(const int *v, int tam_vetor){
-    
-    int i = 0;
-
-    while(i != tam_vetor){
-
-        printf("[%d] = %d", i, v[i]);
-        puts("\n");
-
-        i++;
-    }
-}
+#include "cabecalho.h"
 
 /**
  * @brief Função para Criar um Vetor.
@@ -61,14 +37,32 @@ void DesalocaVetor(int **v){
 }
 
 /**
- * @brief Funcão para Teste das funcoes criadas
+ * @brief Imprime um vetor.
+ * 
+ * @param v Vetor que se deseja imprimir.
+ * @param tam_vetor Tamanho do vetor: Necessário para imprimir todas as posições.
  */
-int main(){
+void LeituraDeVetor(const int *v, int tam_vetor){
+    
+    int i = 0;
 
-    int *v = CriaVetor(6);
-    LeituraDeVetor(v,6);
+    while(i != tam_vetor){
 
-    DesalocaVetor(&v);
+        printf("[%d] = %d", i, v[i]);
+        puts("\n");
 
-    return 0;
+        i++;
+    }
+}
+/**
+ * @brief Testa as funções relacionadas a vetores.
+ */
+void TesteFuncoesVetor(){
+
+    int *vet = CriaVetor(6);
+
+    LeituraDeVetor(vet,6);
+
+    DesalocaVetor(&vet);
+
 }
