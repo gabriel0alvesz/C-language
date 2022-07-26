@@ -17,4 +17,14 @@ void TesteFuncoesVetor();
 
 int **CriaMatriz(int n_rows, int n_columns);
 void ImprimeMatriz(int **M, int n_rows, int n_columns);
+void DesalocaMatriz(int **M, int n_rows);
 void TesteFuncoesMatriz();
+
+/**
+ *  Funções para Matriz 3D
+ */
+
+int ***CriaMatriz3D(int n_slices, int n_rows, int n_columns);
+void ImprimeMatriz3D(int ***M, int n_slices, int n_rows, int n_columns);
+void Desaloca3D(int ***M, int n_slices, int n_rows);
+void Teste3D();

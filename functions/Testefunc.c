@@ -8,6 +8,8 @@ int main(){
     //TesteFuncoesVetor();
 
     //TesteFuncoesMatriz();
-   
+    
+    //Teste3D();
+
     return 0;
 }
