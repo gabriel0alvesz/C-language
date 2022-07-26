@@ -4,7 +4,7 @@
 
 ### Sumário (Sumamry)
 <ul>
-  <li><a href="https://github.com/Nerd100oculoS/C-language-functions-best-practices/blob/main/good-practices/functions.c"> Funções</a> (Functions)
+  <li><a href="https://github.com/Nerd100oculoS/C-language-functions-best-practices/tree/main/functions"> Funções</a> (Functions)
     </li>
 
 </ul>
