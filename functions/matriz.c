@@ -52,20 +52,18 @@ void ImprimeMatriz(int **M, int n_rows, int n_columns){
  * @param M Endereço da Matriz a ser desalocada (&M)
  * @param n_rows Quantidade de linhas da matriz
  */
-void DesalocaMatriz(int ***M, int n_rows){
-
-    int **aux = *M;
+void DesalocaMatriz(int **M, int n_rows){
 
     for(int i = 0; i < n_rows; i++){
-        free(aux[i]);
+        free(M[i]);
     }
 
-    free(aux);
-    *M = NULL;
+    free(M);
+    M = NULL;
 
     puts("Matriz desalocada!\n\n");
 
-    printf("M é nulo? %d", *M == NULL);
+    printf("M é nulo? %d", M == NULL);
 
 }
 
@@ -78,7 +76,7 @@ void TesteFuncoesMatriz(){
 
     ImprimeMatriz(matriz,2,3);
 
-    DesalocaMatriz(&matriz,2);
+    DesalocaMatriz(matriz,2);
 
 }
 
@@ -144,27 +142,25 @@ void ImprimeMatriz3D(int ***M, int n_slices, int n_rows, int n_columns){
  * @param n_slices Quantidade de latias.
  * @param n_rows Quantidade de linhas.
  */
-void Desaloca3D(int ****M, int n_slices, int n_rows){
-
-    int ***aux = **M;
+void Desaloca3D(int ***M, int n_slices, int n_rows){
 
     for(int i = 0; i < n_slices; i++){
 
         for(int j = 0; j < n_rows; j++){
 
-            free(aux[i][j]);
+            free(M[i][j]);
 
         }
 
-        free(aux[i]);
+        free(M[i]);
     }
 
-    free(aux);
-    *M = NULL;
+    free(M);
+    M = NULL;
 
     puts("Matriz 3D desalocada!\n\n");
 
-    printf("M é nulo? %d", *M == NULL);
+    printf("M é nulo? %d", M == NULL);
 
 }
 
@@ -177,6 +173,6 @@ void Teste3D(){
 
     ImprimeMatriz3D(matriz,3,3,3);
 
-    Desaloca3D(&matriz,3,3);
+    Desaloca3D(matriz,3,3);
     
 }
