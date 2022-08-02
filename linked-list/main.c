@@ -6,5 +6,10 @@ int main(){
 
    SList_Create(&l);
 
+   SNode *aux = SList_CreateNode(3);
+
+   SList_isEmpty(&l);
+
     return 0;
 }
+
