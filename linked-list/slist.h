@@ -50,7 +50,7 @@ void SList_InsertHead(SList *sl, int val);
 /**
  * @brief Imprime todos os elementos da lista.
  * 
- * @param sl Lista Simples e a ser imprimida
+ * @param sl Lista Simples a ser imprimida
  */
 void SList_PrintSList(SList *sl);
 

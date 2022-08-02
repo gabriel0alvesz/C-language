@@ -6,9 +6,12 @@ int main(){
 
    SList_Create(&l);
 
-   SNode *aux = SList_CreateNode(3);
+   SList_InsertHead(&l,3);
+   SList_InsertHead(&l,4);
+   SList_InsertHead(&l,5);
 
-   SList_isEmpty(&l);
+   SList_PrintSList(&l);
+
 
     return 0;
 }

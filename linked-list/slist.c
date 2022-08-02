@@ -20,9 +20,48 @@ SNode *SList_CreateNode(int val){
 
 bool SList_isEmpty(SList *sl){
 
-    if(sl->last == sl->first || sl->tam == 0 || sl->first->prox == NULL){
+    if(sl->tam == 0){
+        //puts("Vazia!\n");
         return true; //Lista está vazia
     }
     return false;
-    
+}
 
+void SList_InsertHead(SList *sl, int val){
+
+    SNode *elem = SList_CreateNode(val);
+    
+    if(SList_isEmpty(sl) == true){
+
+        sl->first->prox = elem; // O novo nó passa a ser o primeiro elemento da lista;
+        sl->last = elem; // E como a lista esta vazia, tambem passa a ser o ultimo elemento
+        sl->tam++;       
+    
+    }else{
+
+        //Faz Swap
+        SNode *aux = sl->first->prox; //Recebe o endereço do primeiro elemento.
+        elem->prox = aux; // O novo no aponta agora para o antigo primeiro elemento que agora é segundo nó.
+        sl->first->prox = elem; // A cabeça agora aponta para o elemento criado, que agora é o primeiro nó.
+        sl->tam++; // incrementa o tamnho da Lista.
+
+        //printf("tam = %d\n",sl->tam);
+    }
+
+}
+
+void SList_PrintSList(SList *sl){
+
+    SNode *aux = sl->first->prox;
+
+    while(aux != NULL){
+
+        printf("%d ", aux->val);
+        aux = aux->prox; // Percorre a Lista.
+
+    }
+
+    puts("\n");
+    printf("Tamanho da Lista = %d\n",sl->tam);
+
+}
