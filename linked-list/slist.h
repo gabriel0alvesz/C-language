@@ -69,4 +69,12 @@ void SList_PrintSList(SList *sl);
  */
 void SList_DestroySList(SList *sl);
 
+/**
+ * @brief Remove o nó com o valor desejado.
+ * 
+ * @param sl Endereço da lista (&sl).
+ * @param val Valor procurado para seu respetivo nó ser removido.
+ */
+void SList_RemoveNode(SList *sl, int val);
+
 #endif
