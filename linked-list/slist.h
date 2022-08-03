@@ -20,7 +20,7 @@ typedef struct SList{
 }SList;
 
 /**
- * @brief Cria a cabeça da Lista Simples (&l) - Lista Vazia.
+ * @brief Cria a cabeça da Lista Simples (&sl) - Lista Vazia.
  */
 void SList_Create(SList *sl);
 
@@ -35,24 +35,38 @@ SNode *SList_CreateNode(int val);
 /**
  * @brief Verifica se a lista esta vazia.
  * 
- * @param sl Lista Simples a ser verificada.
+ * @param sl Lista Simples a ser verificada(&sl).
  */
 bool SList_isEmpty(SList *sl);
 
 /**
  * @brief Insere na cabeça da lista.
  * 
- * @param sl Lista Simples que se deseja inserir elemento.
+ * @param sl Endereço da lista(&sl).
  * @param val Valor do elemento.
  */
 void SList_InsertHead(SList *sl, int val);
 
 /**
+ * @brief Insere no final da lista.
+ * 
+ * @param sl Endereço da lista(&sl).
+ * @param val Valor do elemento.
+ */
+void SList_InsertFinalList(SList *sl, int val);
+
+/**
  * @brief Imprime todos os elementos da lista.
  * 
- * @param sl Lista Simples a ser imprimida
+ * @param sl Lista Simples a ser imprimida(&sl).
  */
 void SList_PrintSList(SList *sl);
 
+/**
+ * @brief Desaloca um Lista Simples por completo.
+ * 
+ * @param sl Lista Simples a ser desalocada (sl).
+ */
+void SList_DestroySList(SList *sl);
 
 #endif
