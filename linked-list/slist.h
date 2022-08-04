@@ -63,13 +63,6 @@ void SList_InsertFinalList(SList *sl, int val);
 void SList_PrintSList(SList *sl);
 
 /**
- * @brief Desaloca um Lista Simples por completo.
- * 
- * @param sl Lista Simples a ser desalocada (sl).
- */
-void SList_DestroySList(SList *sl);
-
-/**
  * @brief Remove o nó com o valor desejado.
  * 
  * @param sl Endereço da lista (&sl).
@@ -77,13 +70,11 @@ void SList_DestroySList(SList *sl);
  */
 void SList_RemoveNode(SList *sl, int val);
 
-
-
 /**
- * Funções implementadas que foram refatoradas.
+ * @brief Desaloca uma Lista inteira.
+ * 
+ * @param sl Endereço da lista a ser desalocada.
  */
-//void SList_RemoveNode(SList *sl, int val);
-
-
+void SList_DestroySList(SList *sl);
 
 #endif

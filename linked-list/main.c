@@ -30,6 +30,8 @@ int main(){
 
     SList_RemoveNode(&l,14);
 
+    SList_DestroySList(&l);
+
     return 0;
 }
 
