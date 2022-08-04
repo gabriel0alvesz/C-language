@@ -77,4 +77,6 @@ void SList_DestroySList(SList *sl);
  */
 void SList_RemoveNode(SList *sl, int val);
 
+void SList_RemoveNodeV2(SList *sl, int val);
+
 #endif

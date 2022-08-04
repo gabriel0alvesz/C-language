@@ -154,4 +154,57 @@ void SList_RemoveNode(SList *sl, int val){
 
 }
 
+void SList_RemoveNodeV2(SList *sl, int val){
+    
+    if(!SList_isEmpty(sl)){
+
+        SNode *ant = NULL; //Ponteiro que apontará para as posicoes anteriores.
+        SNode *pos = sl->first->prox; //Ponteiro que irá percorrer a lista.
+
+        //Até encontrar um valor ou percorrer toda a Lista
+        while(pos != NULL && pos->val !=val){
+
+            //Atualiza os Ponteiros.
+            ant = pos;
+            pos = pos->prox;
+
+        }
+        
+        //Neste caso foi encontrado um nó com o valor procurado.
+        if(pos != NULL){
+
+            //Se o elemento procurado for o ultimo nó da lista
+            if(sl->last == pos){
+                
+                sl->last = ant;
+
+            }
+
+            //Se o elemento procurado for o primeiro nó da lista
+            if(sl->first->prox == pos){
+
+                sl->first->prox = pos->prox;
+
+            }else{  //Se o elemento estiver entre o primeiro e o ultimo nó da lista.
+
+                ant->prox = pos->prox;
+
+            }
+
+            free(pos);
+            sl->tam--;
+        
+        }else{
+
+            puts("---> Valor procurado não encontrado!\n\n");
+
+        }
+
+    }else{
+
+        puts("---> Lista Vazia!\n\n");
+
+    }
+}
+
 
