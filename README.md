@@ -2,7 +2,7 @@
 
 ## Repositório com funções e estruturas importantes para projetos com a linguagem C.
 
-### Sumário (Sumamry)
+### Sumário (Summary)
 <ul>
   <li><a href="https://github.com/Nerd100oculoS/arrays-one-multidimensional"> Vetores e Matrizes dinâmicos</a> (dynamic arrays) 
     </li>
@@ -11,8 +11,10 @@
   <li><a href="https://github.com/Nerd100oculoS/Doubly-Linked-List"> Lista Duplamente Encadeada</a> (Doubly Linked List) 
     </li>
   <li><a href="https://github.com/Nerd100oculoS/Doubly-Linked-Circular-List"> Lista Circular Duplamente Encadeada</a> (Doubly Linked Circular List) 
-    </li>
+   </li>
      <li><a href="https://github.com/Nerd100oculoS/Dynamic-Stack"> Pilha Dinâmica</a> (Dynamic Stack) 
     </li>
-
+     </li>
+     <li><a href="https://github.com/Nerd100oculoS/Dynamic-Queue"> Fila Dinâmica</a> (Dynamic Queue) 
+    </li>
 </ul>
