@@ -2,6 +2,7 @@
 
 ## Repositório com funções e estruturas importantes para projetos com a linguagem C.
 
+
 ### Sumário (Summary)
 <ul>
   <li><a href="https://github.com/Nerd100oculoS/arrays-one-multidimensional"> Vetores e Matrizes dinâmicos</a> (dynamic arrays) 
@@ -18,3 +19,5 @@
      <li><a href="https://github.com/Nerd100oculoS/Dynamic-Queue"> Fila Dinâmica</a> (Dynamic Queue) 
     </li>
 </ul>
+
+
